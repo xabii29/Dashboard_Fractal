@@ -179,3 +179,16 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Secretos y configuración local
+.streamlit/
+
+# Imágenes de prueba generadas
+Fractales_figs/
+*.png
+
+# Caché y entornos virtuales
+__pycache__/
+venv/
+env/
+.env
