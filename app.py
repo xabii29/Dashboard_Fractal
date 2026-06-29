@@ -139,14 +139,14 @@ st.download_button(
 )
 
 st.markdown("---")
-st.write("¿Te quedo algo cool? 📸 compartelo en mi post de [LinkedIn]({url_post}).\n")
+st.write(f"¿Te quedo algo cool? 📸 compartelo en mi post de [LinkedIn]({url_post}).\n")
 st.write("O guardalo en tu galeria 👌")
 
 st.write("Mis redes:")
 col_lnk, col_git = st.columns(2)
 
 with col_lnk:
-    st.html("""
+    st.html(f"""
         <a href={url_profile} target="_blank" style="text-decoration: none;">
             <button style="width: 100%; background-color: #0077B5; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-weight: bold;">
                 🔗 LinkedIn
@@ -154,7 +154,7 @@ with col_lnk:
         </a>
     """)
 with col_git:
-    st.html("""
+    st.html(f"""
         <a href={git_profile} target="_blank" style="text-decoration: none;">
             <button style="width: 100%; background-color: black; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-weight: bold;">
                 💻 GitHub
