@@ -10,9 +10,9 @@ try:
     git_profile = st.secrets["git"]
     url_post = st.secrets["post"]
 except Exception:
-    url_profile = "https://www.linkedin.com/in/xavier-castillo-p/"
-    git_profile = "https://github.com/xabii29"
-    url_post = "https://www.linkedin.com/in/xavier-castillo"
+    url_profile = "https://www.linkedin.com/"
+    git_profile = "https://github.com/"
+    url_post = "https://www.linkedin.com/"
 
 # 1. Configuración de Matplotlib para entornos web (Evita ventanas flotantes)
 matplotlib.use('Agg')
@@ -67,7 +67,7 @@ if tipo_fractal == "Alfombra de Sierpinski":
 
         buf = io.BytesIO()
         fig.savefig(buf,format='png',dpi=300)
-        st.pyplot(fig,clear_figure=True,use_container_width=True)
+        st.pyplot(fig,clear_figure=True,width=True)
 
 elif tipo_fractal == "Árbol Fractal":
     st.sidebar.subheader("Parámetros del Árbol")
@@ -97,7 +97,7 @@ elif tipo_fractal == "Árbol Fractal":
 
         buf = io.BytesIO()
         fig.savefig(buf,format='png',dpi=300)
-        st.pyplot(fig,clear_figure=True,use_container_width=True)
+        st.pyplot(fig,clear_figure=True,width=True)
 
 elif tipo_fractal == "Espiral de Cuadrados":
     st.sidebar.subheader("Parámetros del Espiral")
@@ -127,7 +127,7 @@ elif tipo_fractal == "Espiral de Cuadrados":
         
         buf = io.BytesIO()
         fig.savefig(buf,format='png',dpi=300)
-        st.pyplot(fig,clear_figure=True,use_container_width=True)
+        st.pyplot(fig,clear_figure=True,width=True)
 
 st.markdown("---")
 st.download_button(
@@ -135,7 +135,7 @@ st.download_button(
     data=buf,
     file_name= tipo_fractal+ ".png",
     mime="image/png",
-    use_container_width=True
+    width=True
 )
 
 st.markdown("---")
