@@ -1,0 +1,8 @@
+streamlit
+numba
+numpy
+matplotlib
+io
+os
+time
+random
