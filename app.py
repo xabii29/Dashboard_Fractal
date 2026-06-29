@@ -67,7 +67,7 @@ if tipo_fractal == "Alfombra de Sierpinski":
 
         buf = io.BytesIO()
         fig.savefig(buf,format='png',dpi=300)
-        st.pyplot(fig,clear_figure=True,width=True)
+        st.pyplot(fig,clear_figure=True)
 
 elif tipo_fractal == "Árbol Fractal":
     st.sidebar.subheader("Parámetros del Árbol")
@@ -97,7 +97,7 @@ elif tipo_fractal == "Árbol Fractal":
 
         buf = io.BytesIO()
         fig.savefig(buf,format='png',dpi=300)
-        st.pyplot(fig,clear_figure=True,width=True)
+        st.pyplot(fig,clear_figure=True)
 
 elif tipo_fractal == "Espiral de Cuadrados":
     st.sidebar.subheader("Parámetros del Espiral")
@@ -127,7 +127,7 @@ elif tipo_fractal == "Espiral de Cuadrados":
         
         buf = io.BytesIO()
         fig.savefig(buf,format='png',dpi=300)
-        st.pyplot(fig,clear_figure=True,width=True)
+        st.pyplot(fig,clear_figure=True)
 
 st.markdown("---")
 st.download_button(
@@ -135,7 +135,7 @@ st.download_button(
     data=buf,
     file_name= tipo_fractal+ ".png",
     mime="image/png",
-    width=True
+    use_container_width=True
 )
 
 st.markdown("---")
