@@ -24,7 +24,7 @@ def limpiar_consola(pausa = 0.5):
 def colores(N):
     vals = np.linspace(0,1,N)
     paleta = random.choice(list(plt.colormaps))
-    colors = cm.get_cmap(paleta)
+    colors = plt.colormaps[paleta]
     colors = colors(vals)
     return colors,paleta
 
